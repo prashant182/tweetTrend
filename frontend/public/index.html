@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweet Trends</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #map{
+            height: 500px;
+            width: 100%;
+        }
+        #keywordarea{
+            background-color: lightsalmon;
+            height :250px;
+        }
+        label {color: #101112;}
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="./CSS/css/bootstrap.css">
+    <script type ="text/javascript" src="./JS/twitterJS.js"></script>
+    <script type ="text/javascript" src="./JS/jquery.min.js"></script>
+    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8eqPX0PoAttkUMD_L57W3FD4L0gCEtuE&callback=initMap"></script>
+</head>
+
+<body onload="initMap()">
+<div id="map"></div>
+<!--<script>-->
+    <!--function initMap(){-->
+        <!--var location = {lat: 27.854624, lng: 27.210935};-->
+        <!--var map = new google.maps.Map(document.getElementById("map"), {-->
+            <!--zoom: 2,-->
+            <!--center: location-->
+        <!--});-->
+        <!--var marker = new google.maps.Marker({-->
+            <!--position: location,-->
+            <!--map: map-->
+        <!--});-->
+    <!--}-->
+<!--</script>-->
+
+<div id = "keywordarea">
+    <br>
+    <center>
+        <label style="font-family:Georgia; font-size:20px" > Choose your Tweet Keyword: </label>
+        <br>
+        <br>
+            <select name="words" onchange="selectItem(this.value)">
+                <option value="trump" selected>Trump</option>
+                <option value="NewYork">NewYork</option>
+                <option value="India">India</option>
+                <option value="Food">Food</option>
+                <option value="Life">Life</option>
+                <option value="thank">Thank</option>
+            </select>
+    </center>
+</div>
+</body>
+
+</html>
